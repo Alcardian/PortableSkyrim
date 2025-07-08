@@ -194,6 +194,11 @@ Pandora Behaviour Engine Plus requires .NET runtime version 9.0.6 (version can c
     - Verify that `Pandora Behaviour Engine+` now launches through MO2.
     - Note that `Pandora Behaviour Engine+` seem to register the mouse slightly lower than its posision on screen, easy to work around when you know.
 
+### **Installing Bodyslide and Outfit Studio (Optional)**
+1. Download and enable `Bodyslide and Outfit Studio`.
+2. In the left panel under `Data`, find the exe's under `CalienteTools/Bodyslide`
+    - Right-click the x64 version of the exe's, and select Add as Executable
+
 ### **Set Up Separate Mod as Output (Optional)**
 For `Pandora Behaviour Engine Plus`
 1. Click anywhere in the mod list in the left pane.
