@@ -112,6 +112,27 @@ WINEPREFIX="$HOME/Games/Skyrim_Portable/WinePrefix" wine "$HOME/Games/Skyrim_Por
 
 ```
 3. Verify that MO2 launches from the script.
+4. Verify that Skyrim launches through MO2.
+  - Verify that the console opens (`~` key default). This is a potential issue users using non us keyboard layout.
+
+### Non US Keyboard Layout Script (Optional)
+A variant of the script to switch to us layout before launching MO2, and once you close Skyrim **and** MO2, it will switch back.
+```bash
+#!/bin/bash
+
+# Store the current keyboard layout
+CURRENT_LAYOUT=$(setxkbmap -query | grep layout | awk '{print $2}')
+
+# Switch to US keyboard layout
+setxkbmap us
+
+# Set Wine prefix and run Mod Organizer 2 for Skyrim
+WINEPREFIX="$HOME/Games/Skyrim_Portable/WinePrefix" wine "$HOME/Games/Skyrim_Portable/MO2/ModOrganizer.exe"
+
+# Restore the original keyboard layout
+setxkbmap "$CURRENT_LAYOUT"
+
+```
 
 ## **8. Install DXVK In Your Wine Prefix**
 Have MO2 closed (not running) before contuing.
