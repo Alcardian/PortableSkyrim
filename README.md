@@ -210,3 +210,11 @@ For `Pandora Behaviour Engine Plus`
     - Select `Pandora Behaviour Engine Plus`.
     - Enable `Create file in mod instead of overwrite`
     - Select `Pandora Output`
+
+### Community Shaders
+To use Community Shaders on Linux, you need to add d3dcompiler_47 to your Wine prefix, should see a bunch of errors on Skyrim main menu without it.
+1. Make sure that Skyrim and MO2 are closed.
+2. Run `WINEPREFIX=~/Games/Skyrim_Portable/WinePrefix winetricks d3dcompiler_47`
+3. dxvk and vkd3d are needed.
+   - dxvk is already installed earlier in this guide.
+   - Run `WINEPREFIX=~/Games/Skyrim_Portable/WinePrefix winetricks vkd3d`
